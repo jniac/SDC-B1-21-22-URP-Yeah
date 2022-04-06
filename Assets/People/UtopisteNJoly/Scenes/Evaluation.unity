@@ -511,7 +511,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 8
+  m_Priority: 9
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1417253186}
@@ -613,7 +613,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 8
+  m_Priority: 9
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1417253186}
@@ -1839,8 +1839,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Ca vous dirait une vanne nulle?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0d5462857c1a2df4bac6608a25fce11e, type: 2}
-  m_sharedMaterial: {fileID: -3711671212660908025, guid: 0d5462857c1a2df4bac6608a25fce11e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e015df69ce2b0934592ee3f5a02e7fdc, type: 2}
+  m_sharedMaterial: {fileID: 4115550315534810905, guid: e015df69ce2b0934592ee3f5a02e7fdc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1928,7 +1928,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3711671212660908025, guid: 0d5462857c1a2df4bac6608a25fce11e, type: 2}
+  - {fileID: 4115550315534810905, guid: e015df69ce2b0934592ee3f5a02e7fdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3184,8 +3184,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Bonjour, \xE7a va vous?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0d5462857c1a2df4bac6608a25fce11e, type: 2}
-  m_sharedMaterial: {fileID: -3711671212660908025, guid: 0d5462857c1a2df4bac6608a25fce11e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e015df69ce2b0934592ee3f5a02e7fdc, type: 2}
+  m_sharedMaterial: {fileID: 4115550315534810905, guid: e015df69ce2b0934592ee3f5a02e7fdc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3273,7 +3273,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3711671212660908025, guid: 0d5462857c1a2df4bac6608a25fce11e, type: 2}
+  - {fileID: 4115550315534810905, guid: e015df69ce2b0934592ee3f5a02e7fdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4290,8 +4290,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Comment reconnait-on un sapin en col\xE8re?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0d5462857c1a2df4bac6608a25fce11e, type: 2}
-  m_sharedMaterial: {fileID: -3711671212660908025, guid: 0d5462857c1a2df4bac6608a25fce11e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4379,7 +4379,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3711671212660908025, guid: 0d5462857c1a2df4bac6608a25fce11e, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4469,7 +4469,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 11
+  m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1417253186}
