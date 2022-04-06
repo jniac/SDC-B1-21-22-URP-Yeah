@@ -29,7 +29,7 @@ public static class Snapping
         }
     }
 
-    public static void ApplySnapXYZ(Transform transform, Snapping.SnapStep mode)
+    public static void ApplySnapXYZ(Transform transform, Snapping.SnapStep mode, bool resetRotation = true)
     {
         var s = SnapModeToScalar(mode);
 
@@ -46,6 +46,7 @@ public static class Snapping
 
         transform.position = position + size / 2f;
         transform.localScale = size;
-        transform.rotation = Quaternion.identity;
+        if (resetRotation)
+            transform.rotation = Quaternion.identity;
     }
 }

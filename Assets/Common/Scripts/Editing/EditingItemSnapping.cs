@@ -25,6 +25,7 @@ public class EditingItemSnapping : MonoBehaviour
 
     // XYZ Mode
     public Snapping.SnapStep xyzMode = Snapping.SnapStep.Unit;
+    public bool resetRotation = true;
 
     IEnumerable<RaycastHit> GetHits()
     {
@@ -100,7 +101,7 @@ public class EditingItemSnapping : MonoBehaviour
 
     void SnapXYZ()
     {
-        Snapping.ApplySnapXYZ(transform, xyzMode);
+        Snapping.ApplySnapXYZ(transform, xyzMode, resetRotation);
     }
 
     void Update()
@@ -143,6 +144,7 @@ public class EditingItemSnapping : MonoBehaviour
 
                 case SnapMode.XYZ:
                     Draw("xyzMode");
+                    Draw("resetRotation");
                     break;
             }
 
