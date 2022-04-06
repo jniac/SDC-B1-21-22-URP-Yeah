@@ -370,6 +370,10 @@ PrefabInstance:
       value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5676730502064338362, guid: c718ecf76e48a9440b71b666b376ecd3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676730502064338362, guid: c718ecf76e48a9440b71b666b376ecd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39
       objectReference: {fileID: 0}
@@ -1612,7 +1616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1744692805307148544, guid: 474a3f4c4a1994eb3970e4e00c71ff2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27
+      value: -29
       objectReference: {fileID: 0}
     - target: {fileID: 1744692805307148544, guid: 474a3f4c4a1994eb3970e4e00c71ff2d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2149,8 +2153,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 23
+  m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3362,7 +3366,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7634794281553622049, guid: 4886f5aed73fa4fb1aa1a096dc07328d, type: 3}
       propertyPath: speed
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7634794281553622052, guid: 4886f5aed73fa4fb1aa1a096dc07328d, type: 3}
       propertyPath: yOver
@@ -3620,8 +3624,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 23
+  m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4701,8 +4705,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Comment reconnait-on un sapin en col\xE8re?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ebc2162b44113d2448857bf7d5a680d6, type: 2}
+  m_sharedMaterial: {fileID: -4821096831400836440, guid: ebc2162b44113d2448857bf7d5a680d6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4790,7 +4794,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -4821096831400836440, guid: ebc2162b44113d2448857bf7d5a680d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
