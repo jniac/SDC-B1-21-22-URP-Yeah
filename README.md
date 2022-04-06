@@ -14,3 +14,11 @@
 
 - Ouvrir le dossier téléchargé avec Unity hub
   ![Clone-3](https://user-images.githubusercontent.com/11039919/161912413-0084d59a-9ebf-481d-a95c-57bb6dc896ae.jpg)
+
+## TextMeshPro
+Pour importer une nouvelle typo, il faut :
+- Télécharger les fichiers source (.ttf) depuis google fonts, dafonts etc.
+- Les copier dans le projet Unity.
+- Créer un "font asset" depuis le menu suivant : 
+  ![TextMesgPro-CreateFontAsset](https://user-images.githubusercontent.com/11039919/161916241-7c734b65-dfc1-445b-aef0-46c10c87c39b.jpg)
+
