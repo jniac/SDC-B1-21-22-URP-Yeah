@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1d546e295ede9429e218bc799aa449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBonus: 5
+  timeBonus: 3
 --- !u!1 &7157066327144644533
 GameObject:
   m_ObjectHideFlags: 0

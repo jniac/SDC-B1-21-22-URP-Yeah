@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class qng_TimeBonus : MonoBehaviour
 {
-    public float timeBonus = 5f;
+    public float timeBonus = 3f;
 
     void OnTriggerEnter(Collider other)
     {
