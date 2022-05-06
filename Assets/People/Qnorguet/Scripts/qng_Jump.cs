@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class norguet_Jump : MonoBehaviour
+public class qng_Jump : MonoBehaviour
 {
     public float JumpVelocity = 10f;
     
