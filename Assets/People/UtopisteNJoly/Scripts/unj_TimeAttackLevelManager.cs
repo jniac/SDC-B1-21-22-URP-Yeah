@@ -17,8 +17,8 @@ public class unj_TimeAttackLevelManager : MonoBehaviour
 
     void Update()
     {
-        elapsedTime = elapsedTime + Time.deltaTime;
-        remainingTime = remainingTime - Time.deltaTime;
+        elapsedTime +=  Time.deltaTime;
+        remainingTime -= Time.deltaTime;
 
         if (remainingTime < 0f)
         {
