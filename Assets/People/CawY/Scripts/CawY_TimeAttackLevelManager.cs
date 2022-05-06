@@ -7,6 +7,7 @@ public class CawY_TimeAttackLevelManager : MonoBehaviour
     public GameObject gameoverScreen;
     public float elapsedTime = 0f;
     public float remainingTime = 3f;
+    public bool timePaused = false;
 
     public TMPro.TextMeshProUGUI remainingText;
 
@@ -20,15 +21,18 @@ public class CawY_TimeAttackLevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        elapsedTime = elapsedTime + Time.deltaTime;
-        remainingTime = Mathf.Clamp(remainingTime - Time.deltaTime, 0f, float.PositiveInfinity);
-
+        if (timePaused == false)
+        {
+            elapsedTime = elapsedTime + Time.deltaTime;
+            remainingTime = Mathf.Clamp(remainingTime - Time.deltaTime, 0f, float.PositiveInfinity);
+        }
         remainingText.text = $"time: {remainingTime:F1}s";
 
         if (remainingTime <= 0f)
         {
             GameOver();
         }
+
     }
     void GameOver()
     {
