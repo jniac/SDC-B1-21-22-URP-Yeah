@@ -4,31 +4,39 @@ using UnityEngine;
 
 public class unj_TimeAttackLevelManager : MonoBehaviour
 {
-    public GameObject gameOverScreen;
+    public GameObject gameoverScreen;
     public float elapsedTime = 0f;
     public float remainingTime = 3f;
+    public bool timePaused = false;
 
+    public TMPro.TextMeshProUGUI remainingText;
+
+    // Start is called before the first frame update
     void Start()
     {
-        gameOverScreen.SetActive(false);
+        gameoverScreen.SetActive(false);
         elapsedTime = 0f;
-
     }
 
+    // Update is called once per frame
     void Update()
     {
-        elapsedTime +=  Time.deltaTime;
-        remainingTime -= Time.deltaTime;
+        if (timePaused == false)
+        {
+            elapsedTime = elapsedTime + Time.deltaTime;
+            remainingTime = Mathf.Clamp(remainingTime - Time.deltaTime, 0f, float.PositiveInfinity);
+        }
+        remainingText.text = $"time: {remainingTime:F1}s";
 
-        if (remainingTime < 0f)
+        if (remainingTime <= 0f)
         {
             GameOver();
         }
-    }
 
+    }
     void GameOver()
     {
-        gameOverScreen.SetActive(true);
+        gameoverScreen.SetActive(true);
         Time.timeScale = 0f;
     }
 }
