@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Kev_TimeBonus : MonoBehaviour
 {
-    public float timeBonus = 5f;
+    public float timeAmount = 3f;
 
     void OnTriggerEnter(Collider other)
     {
-        Destroy (gameObject);
-        qng_TimeAttackLevelManager manager = FindObjectOfType<qng_TimeAttackLevelManager>();
-        manager.remainingTime += timeBonus;
+        var timeAttack = FindObjectOfType<Kev_TimeAttackLevelManager>();
+        timeAttack.remainingTime -= timeAmount;
+
+        Destroy(gameObject);
     }
 }
+
