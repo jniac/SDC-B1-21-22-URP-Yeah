@@ -44,10 +44,4 @@ public class jnc_TimeAttackLevelManager : MonoBehaviour
         gameoverScreen.SetActive(true);
         Time.timeScale = 0f;
     }
-
-    public void RestartLevel()
-    {
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name, LoadSceneMode.Single);
-    }
 }
