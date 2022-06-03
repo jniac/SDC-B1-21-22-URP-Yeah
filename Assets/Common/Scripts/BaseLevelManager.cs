@@ -30,6 +30,7 @@ public class BaseLevelManager : MonoBehaviour
     public void ReloadCurrentScene()
     {
         isRunning = false;
+        Time.timeScale = 1f;
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name, LoadSceneMode.Single);
     }
