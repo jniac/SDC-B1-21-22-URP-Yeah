@@ -23,12 +23,16 @@ async function* walk(dir, filter) {
 }
 
 /**
+ * @typedef  {'incoming' | 'current'} ResolveMode 
+ */
+
+/**
  * 
  * @param {string} entry
  * @param {string} data
- * @param {'incoming' | 'current'} mode
+ * @param {ResolveMode} mode
  */
-const checkData = async (entry, data, mode = 'incoming') => {
+const checkData = (entry, data, mode = 'incoming') => {
   const startLength = '<<<<<<< HEAD\n'.length
   const middelLength = '=======\n'.length
   const endLength = '>>>>>>> 77eae295b361c2f00534528b4ee2592b5b86fc4a\n'.length
@@ -51,24 +55,34 @@ const checkData = async (entry, data, mode = 'incoming') => {
     start += 1
   }
 
-  if (modified) {
-    await fs.promises.writeFile(entry, data)
-    console.log(`resolved (with ${useIncoming ? 'incoming' : 'current'}): ${entry}`)
-  }
+  return { modified, data }
 }
 
 const main = async () => {
+  const dryRun = process.argv.includes('--dry-run')
   const filter = /\.(mat|asset)$/
   let count = 0
   for await (const entry of walk('Assets', filter)) {
     try {
-      const data = await fs.promises.readFile(entry, 'utf-8')
-      await checkData(entry, data, 'incoming')
+      const source = await fs.promises.readFile(entry, 'utf-8')
+      /** @type {ResolveMode} */
+      const mode = 'incoming'
+      const { modified, data } = checkData(entry, source, mode)
+      if (modified) {
+        if (dryRun === false) {
+          await fs.promises.writeFile(entry, data)
+        }
+        console.log(`resolved (with ${mode}): ${entry}`)
+      }
     }
     catch (e) {
       console.log(e)
     }
     if (count++ > 1000) break
+  }
+
+  if (dryRun) {
+    console.log(`Note: Source files has not been modified (--dry-run)`)
   }
 }
 
