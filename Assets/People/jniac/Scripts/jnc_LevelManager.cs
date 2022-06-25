@@ -7,7 +7,15 @@ using UnityEngine.Events;
 public class jnc_LevelManager : MonoBehaviour
 {
     public static jnc_LevelManager Instance { get; private set; }
+
+    public enum WinCondition
+    {
+        AllCoin,
+        AllPurpleCoins,
+        DebugOneCoin,
+    }
     
+    public WinCondition winCondition = WinCondition.AllCoin;
     public bool hasWon = false;
     public float winTime = -1;
     public UnityEvent Win = new UnityEvent();
@@ -24,16 +32,31 @@ public class jnc_LevelManager : MonoBehaviour
         (all, normals, purples) = jnc_Coin.GetAllCoins();
     }
 
-    void SessionUpdate()
+    bool HasWon()
     {
-        sessionTime += Time.deltaTime;
-
         int normalFound = normals.Where(item => item == null).Count();
         int purpleFound = purples.Where(item => item == null).Count();
         int totalFound = normalFound + purpleFound;
 
-        // if (totalFound > 1) // debug
-        if (totalFound == all.Length)
+        switch(winCondition)
+        {
+            default:
+            case WinCondition.AllCoin:
+                return totalFound == all.Length;
+
+            case WinCondition.AllPurpleCoins:
+                return purpleFound == purples.Length;
+
+            case WinCondition.DebugOneCoin:
+                return totalFound > 0;
+        }
+    }
+
+    void SessionUpdate()
+    {
+        sessionTime += Time.deltaTime;
+
+        if (HasWon())
         {
             hasWon = true;
             winTime = Time.time;
